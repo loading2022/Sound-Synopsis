@@ -123,7 +123,7 @@ def index():
 @app.route('/download_transcript', methods = ['GET'])
 def download_transcript():
     filepath = './transcript.docx'
-    # 检查文件是否存在
+    
     if os.path.exists(filepath):
         return send_file(filepath, as_attachment=True)
     else:
@@ -220,3 +220,4 @@ def process_text():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
